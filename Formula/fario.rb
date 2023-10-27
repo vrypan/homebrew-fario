@@ -2,8 +2,8 @@ class Fario < Formula
   include Language::Python::Virtualenv
   desc "Command line tools for Farcaster power users."
   homepage "https://github.com/vrypan/fario"
-  url "https://files.pythonhosted.org/packages/31/0a/445da9419969d1ddd41cee41765d7b42f0229ac107df25b1dc34fabbc5c2/fario-0.5.3.tar.gz"
-  sha256 "2a33c434fb2279298d515f5b916671c797d647bcb7374d7584f33844f346baeb"
+  url "https://files.pythonhosted.org/packages/08/80/e96c17efefb83a3d13487f406634b0b7191b01f2bbf07a6b491974596549/fario-0.6.0.tar.gz"
+  sha256 "86757e58dc4f42ef0983126f7d5462e8d6bb8aa9699bab38026752464ccf5d78"
   license "MIT License"
 
   livecheck do
@@ -12,13 +12,7 @@ class Fario < Formula
 
   depends_on "python@3.11"
   depends_on "rust" => [:build]
-  # depends_on "python-setuptools" => [:build]
 
-  
-  #resource "setuptools" do
-  #  url "https://files.pythonhosted.org/packages/1e/5c/3d7b3d91a86d71faf5038c5d259ed36b5d05b7804648e2c43251d574a6e6/setuptools-58.2.0.tar.gz"
-  #  sha256 "2c55bdb85d5bb460bd2e3b12052b677879cffcf46c0c688f2e5bf51d36001145"
-  #end
   resource "setuptools" do
     url "https://files.pythonhosted.org/packages/e6/e2/f2bfdf364e016f7a464db709ea40d1101c4c5a463dd7019dae0a42dbd1c6/setuptools-59.5.0.tar.gz"
     sha256 "d144f85102f999444d06f9c0e8c737fd0194f10f2f7e5fdb77573f6e2fa4fad0"
