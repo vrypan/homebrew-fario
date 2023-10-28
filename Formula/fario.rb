@@ -2,15 +2,16 @@ class Fario < Formula
   include Language::Python::Virtualenv
   desc "Command line tools for Farcaster power users."
   homepage "https://github.com/vrypan/fario"
-  url "https://files.pythonhosted.org/packages/08/80/e96c17efefb83a3d13487f406634b0b7191b01f2bbf07a6b491974596549/fario-0.6.0.tar.gz"
-  sha256 "86757e58dc4f42ef0983126f7d5462e8d6bb8aa9699bab38026752464ccf5d78"
-  license "MIT License"
+  url "https://files.pythonhosted.org/packages/77/d3/23d3c96d0eee840e5936430f17278affd5537df1a79f6d4e4b6045b6b4fd/fario-0.6.1.tar.gz"
+  sha256 "b270238550ce4b090b231849bcbac7f87cc23b96acc0a26c42948d3dc96ae705"
+  license "MIT"
 
   livecheck do
     url :stable
   end
 
   depends_on "python@3.11"
+  depends_on "protobuf"
   depends_on "rust" => [:build]
 
   resource "setuptools" do
@@ -134,10 +135,10 @@ class Fario < Formula
     sha256 "acf70a63cf09dd494000007b798aff88a436e1c03b394995ce450be437b8e54f"
   end
 
-  resource "grpcio-tools" do
-    url "https://files.pythonhosted.org/packages/b8/62/bac5143fd2629d611c03832737040d1bb168ad52d59cab41131df0e06ead/grpcio-tools-1.59.0.tar.gz"
-    sha256 "aa4018f2d8662ac4d9830445d3d253a11b3e096e8afe20865547137aa1160e93"
-  end
+#  resource "grpcio-tools" do
+#    url "https://files.pythonhosted.org/packages/b8/62/bac5143fd2629d611c03832737040d1bb168ad52d59cab41131df0e06ead/grpcio-tools-1.59.0.tar.gz"
+#    sha256 "aa4018f2d8662ac4d9830445d3d253a11b3e096e8afe20865547137aa1160e93"
+#  end
 
   resource "hexbytes" do
     url "https://files.pythonhosted.org/packages/c1/94/fbfd526e8964652eec6a7b74ae18d1426e225ab602553858531ec6567d05/hexbytes-0.3.1.tar.gz"
@@ -174,10 +175,10 @@ class Fario < Formula
     sha256 "b2ad1ae63a2f65bd78f5e0a8ac510a98f3607a43f1db2a8d46636a5d9e4a30c1"
   end
 
-  resource "protobuf" do
-    url "https://files.pythonhosted.org/packages/52/5c/f2c0778278259089952f94b0884ca27a001a17ffbd992ebe30c841085f4c/protobuf-4.24.4.tar.gz"
-    sha256 "5a70731910cd9104762161719c3d883c960151eea077134458503723b60e3667"
-  end
+  #resource "protobuf" do
+  #  url "https://files.pythonhosted.org/packages/52/5c/f2c0778278259089952f94b0884ca27a001a17ffbd992ebe30c841085f4c/protobuf-4.24.4.tar.gz"
+  #  sha256 "5a70731910cd9104762161719c3d883c960151eea077134458503723b60e3667"
+  #end
 
   resource "pycparser" do
     url "https://files.pythonhosted.org/packages/5e/0b/95d387f5f4433cb0f53ff7ad859bd2c6051051cebbb564f139a999ab46de/pycparser-2.21.tar.gz"
