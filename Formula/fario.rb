@@ -263,9 +263,9 @@ class Fario < Formula
 
   test do
     test_data = "CisIAxCYAhjo474qIAE6HQgBEhkI9zkSFONiSeodagMncU00Xs/XznjYdQeYEhRlTQUMIgWvIZSulS" \
-    "M9TARI4d6K7hgBIkAfkcol+WyG0sNLEwQZ/ps4Z9A7+rP3GvLQoqM2jQijMWgh9iUKG0l4z1OxzSNp5oY8nZmuUyiM" \
-    "KW1zAzT6mqUNKAEyIGojm0P59c/uG4Is6+7zhoo5SXFmMNoxXWaWWNDLn59I"
+                "M9TARI4d6K7hgBIkAfkcol+WyG0sNLEwQZ/ps4Z9A7+rP3GvLQoqM2jQijMWgh9iUKG0l4z1OxzSNp" \
+                "5oY8nZmuUyiMKW1zAzT6mqUNKAEyIGojm0P59c/uG4Is6+7zhoo5SXFmMNoxXWaWWNDLn59I"
     assert_match test_data, shell_output("echo #{test_data} | #{bin}/fario2json| #{bin}/json2fario")
-    assert_match "fario-out v0.7.1", shell_output("fario-out --version")
+    assert_match "fario-out v0.7.1", shell_output("#{bin}/fario-out --version")
   end
 end
