@@ -10,8 +10,8 @@ class Fario < Formula
     url :stable
   end
 
-  depends_on "protobuf"
   depends_on "rust" => [:build]
+  depends_on "protobuf"
   depends_on "python@3.11"
 
   resource "setuptools" do
@@ -262,8 +262,10 @@ class Fario < Formula
   end
 
   test do
-    testData = "CisIAxCYAhjo474qIAE6HQgBEhkI9zkSFONiSeodagMncU00Xs/XznjYdQeYEhRlTQUMIgWvIZSulSM9TARI4d6K7hgBIkAfkcol+WyG0sNLEwQZ/ps4Z9A7+rP3GvLQoqM2jQijMWgh9iUKG0l4z1OxzSNp5oY8nZmuUyiMKW1zAzT6mqUNKAEyIGojm0P59c/uG4Is6+7zhoo5SXFmMNoxXWaWWNDLn59I"
-    assert_match testData, shell_output("echo \"%s\" | fario2json| json2fario" % [testData])
+    test_data = "CisIAxCYAhjo474qIAE6HQgBEhkI9zkSFONiSeodagMncU00Xs/XznjYdQeYEhRlTQUMIgWvIZSulS"\
+    "M9TARI4d6K7hgBIkAfkcol+WyG0sNLEwQZ/ps4Z9A7+rP3GvLQoqM2jQijMWgh9iUKG0l4z1OxzSNp5oY8nZmuUyiMKW"\
+    "1zAzT6mqUNKAEyIGojm0P59c/uG4Is6+7zhoo5SXFmMNoxXWaWWNDLn59I"
+    assert_match test_data, shell_output("echo #{test_data} | fario2json| json2fario")
     assert_match "fario-out v0.7.1", shell_output("fario-out --version")
   end
 end
