@@ -2,8 +2,8 @@ class Fario < Formula
   include Language::Python::Virtualenv
   desc "Command line tools for Farcaster power users."
   homepage "https://github.com/vrypan/fario"
-  url "https://files.pythonhosted.org/packages/c4/9e/a364bcc0643e170ac1f11e8d2f11b983230596cc1514e9cf0823a5e081bf/fario-0.7.0.tar.gz"
-  sha256 "d8557c379d8d0c6e32bab29397fa1870700f09acdd36fe8f85982010e2f3c999"
+  url "https://files.pythonhosted.org/packages/b8/74/48b2de371dfaf41a630eaa1f7e390918715f9499f250716b06d39dbae49e/fario-0.7.1.tar.gz"
+  sha256 "579327b2eae81de295493ed0115c67297b7e05e12b947de2d951db5645a33cee"
   license "MIT"
 
   livecheck do
