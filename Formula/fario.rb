@@ -1,6 +1,6 @@
 class Fario < Formula
   include Language::Python::Virtualenv
-  desc "Command line tools for Farcaster power users."
+  desc "Command-line tools for Farcaster power users"
   homepage "https://github.com/vrypan/fario"
   url "https://files.pythonhosted.org/packages/b8/74/48b2de371dfaf41a630eaa1f7e390918715f9499f250716b06d39dbae49e/fario-0.7.1.tar.gz"
   sha256 "579327b2eae81de295493ed0115c67297b7e05e12b947de2d951db5645a33cee"
@@ -10,9 +10,9 @@ class Fario < Formula
     url :stable
   end
 
-  depends_on "python@3.11"
   depends_on "protobuf"
   depends_on "rust" => [:build]
+  depends_on "python@3.11"
 
   resource "setuptools" do
     url "https://files.pythonhosted.org/packages/e6/e2/f2bfdf364e016f7a464db709ea40d1101c4c5a463dd7019dae0a42dbd1c6/setuptools-59.5.0.tar.gz"
@@ -26,7 +26,6 @@ class Fario < Formula
     url "https://files.pythonhosted.org/packages/20/63/8b5205a7f9e2792137676c2d29bd6bc9cbecca95015a55ed54d6dd02f3f6/rlp-3.0.0.tar.gz"
     sha256 "63b0465d2948cd9f01de449d7adfb92d207c1aef3982f20310f8009be4a507e8"
   end
-
 
   resource "aiohttp" do
     url "https://files.pythonhosted.org/packages/fd/01/f180d31923751fd20185c96938994823f00918ee5ac7b058edc005382406/aiohttp-3.8.6.tar.gz"
@@ -133,10 +132,10 @@ class Fario < Formula
     sha256 "acf70a63cf09dd494000007b798aff88a436e1c03b394995ce450be437b8e54f"
   end
 
-#  resource "grpcio-tools" do
-#    url "https://files.pythonhosted.org/packages/b8/62/bac5143fd2629d611c03832737040d1bb168ad52d59cab41131df0e06ead/grpcio-tools-1.59.0.tar.gz"
-#    sha256 "aa4018f2d8662ac4d9830445d3d253a11b3e096e8afe20865547137aa1160e93"
-#  end
+  # resource "grpcio-tools" do
+  #   url "https://files.pythonhosted.org/packages/b8/62/bac5143fd2629d611c03832737040d1bb168ad52d59cab41131df0e06ead/grpcio-tools-1.59.0.tar.gz"
+  #   sha256 "aa4018f2d8662ac4d9830445d3d253a11b3e096e8afe20865547137aa1160e93"
+  # end
 
   resource "hexbytes" do
     url "https://files.pythonhosted.org/packages/c1/94/fbfd526e8964652eec6a7b74ae18d1426e225ab602553858531ec6567d05/hexbytes-0.3.1.tar.gz"
@@ -173,10 +172,10 @@ class Fario < Formula
     sha256 "b2ad1ae63a2f65bd78f5e0a8ac510a98f3607a43f1db2a8d46636a5d9e4a30c1"
   end
 
-  #resource "protobuf" do
+  # resource "protobuf" do
   #  url "https://files.pythonhosted.org/packages/52/5c/f2c0778278259089952f94b0884ca27a001a17ffbd992ebe30c841085f4c/protobuf-4.24.4.tar.gz"
   #  sha256 "5a70731910cd9104762161719c3d883c960151eea077134458503723b60e3667"
-  #end
+  # end
 
   resource "pycparser" do
     url "https://files.pythonhosted.org/packages/5e/0b/95d387f5f4433cb0f53ff7ad859bd2c6051051cebbb564f139a999ab46de/pycparser-2.21.tar.gz"
@@ -258,16 +257,13 @@ class Fario < Formula
     sha256 "04ab9d4b9f587c06d801c2abfe9317b77cdf996c65a90d5e84ecc45010823571"
   end
 
-
   def install
     virtualenv_install_with_resources
   end
 
   test do
     testData = "CisIAxCYAhjo474qIAE6HQgBEhkI9zkSFONiSeodagMncU00Xs/XznjYdQeYEhRlTQUMIgWvIZSulSM9TARI4d6K7hgBIkAfkcol+WyG0sNLEwQZ/ps4Z9A7+rP3GvLQoqM2jQijMWgh9iUKG0l4z1OxzSNp5oY8nZmuUyiMKW1zAzT6mqUNKAEyIGojm0P59c/uG4Is6+7zhoo5SXFmMNoxXWaWWNDLn59I"
-    assert_match testData, shell_output(
-    "echo \"%s\" | fario2json| json2fario" % [testData]
-    )
+    assert_match testData, shell_output("echo \"%s\" | fario2json| json2fario" % [testData])
     assert_match "fario-out v0.7.1", shell_output("fario-out --version")
   end
-end 
+end
