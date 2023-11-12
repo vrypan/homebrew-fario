@@ -118,8 +118,8 @@ class Fario < Formula
   end
 
   resource "farcaster-py" do
-    url "https://files.pythonhosted.org/packages/c5/6f/53ed71532359fcd73676e85cf0c3875a61b39a06404893090f1b00d3abc3/farcaster_py-0.0.6.tar.gz"
-    sha256 "3fc9b056a6355b1ae50777602a54ddb6f7d05fe36d881f1fc64c269db7dfdd3e"
+    url "https://files.pythonhosted.org/packages/ed/1e/8f4236d5c73f28ed1351b751cc4911945390a92ad0a3d0f29f819fb95623/farcaster_py-0.0.7.tar.gz"
+    sha256 "4c942710a641f06d49f6e1fd1103c04af590919d274b7cf8ae8d5f82feae7583"
   end
 
   resource "frozenlist" do
