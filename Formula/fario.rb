@@ -2,8 +2,8 @@ class Fario < Formula
   include Language::Python::Virtualenv
   desc "Command-line tools for Farcaster power users"
   homepage "https://github.com/vrypan/fario"
-  url "https://files.pythonhosted.org/packages/67/48/082a03a6d46debc87b9094035a725b141492ea0d9fb8f22a204aa9fefeeb/fario-0.7.4.tar.gz"
-  sha256 "1477b7b9a7023cdb4e38ff06d0ec062c4bee2a325569fe95f6d0d19060cb172e"
+  url "https://files.pythonhosted.org/packages/45/81/d125a4ad8fead2a8dbc2ee5dd7a8e9ee344ad3e8846f9e5975b6484934cb/fario-0.7.6.tar.gz"
+  sha256 "2b5433b4500a090a7c058c295085cca6c53e2b33e030b2d4b3829c43336e73a8"
   license "MIT"
 
   livecheck do
@@ -118,8 +118,8 @@ class Fario < Formula
   end
 
   resource "farcaster-py" do
-    url "https://files.pythonhosted.org/packages/ed/1e/8f4236d5c73f28ed1351b751cc4911945390a92ad0a3d0f29f819fb95623/farcaster_py-0.0.7.tar.gz"
-    sha256 "4c942710a641f06d49f6e1fd1103c04af590919d274b7cf8ae8d5f82feae7583"
+    url "https://files.pythonhosted.org/packages/6b/2f/f8795228e70cc94aa606bfb27fd89f01b778f9ad1bea0789d06a51de920d/farcaster_py-0.0.9.tar.gz"
+    sha256 "8ddcc766678964781995d36e7176d116712a2cc0f662c695f719ce6e64848861"
   end
 
   resource "frozenlist" do
