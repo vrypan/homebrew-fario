@@ -6,6 +6,12 @@ class Fario < Formula
   sha256 "0489d2ed6c8d19a8d84d6ddca96ee05c83ce94cf0baaa9cdab456862a8fa732b"
   license "MIT"
 
+  bottle do
+    rebuild 1
+    root_url "https://files.vrypan.com"
+    sha256 cellar: :any, arm64_sonoma: "ba716b302662f7fb6749463770228edb89b4c81413a7a10328f7ea3982638371"
+  end
+
   livecheck do
     url :stable
   end
