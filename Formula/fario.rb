@@ -8,7 +8,7 @@ class Fario < Formula
 
   bottle do
    rebuild 1
-   root_url "https://raw.githubusercontent.com/vrypan/homebrew-fario/main/"
+   root_url "https://raw.githubusercontent.com/vrypan/homebrew-fario/main"
    sha256 cellar: :any, arm64_sonoma: "cea66be6a21406d34a0199404ffbab8a3c204e6f8676ae9ca2db2983b6b9264e"
   end
 
