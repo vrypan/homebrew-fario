@@ -6,11 +6,11 @@ class Fario < Formula
   sha256 "115d3cb386010405f5ce09b3b8ea9111725c53c39e5f942c5e0cb2cdcc97ad9f"
   license "MIT"
 
-  # bottle do
-  #  rebuild 1
-  #  root_url "https://files.vrypan.com"
-  #  sha256 cellar: :any, arm64_sonoma: "ba716b302662f7fb6749463770228edb89b4c81413a7a10328f7ea3982638371"
-  # end
+  bottle do
+   rebuild 1
+   root_url "https://github.com/vrypan/homebrew-fario/raw/main/"
+   sha256 cellar: :any, arm64_sonoma: "cea66be6a21406d34a0199404ffbab8a3c204e6f8676ae9ca2db2983b6b9264e"
+  end
 
   livecheck do
     url :stable
