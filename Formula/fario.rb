@@ -2,15 +2,15 @@ class Fario < Formula
   include Language::Python::Virtualenv
   desc "Command-line tools for Farcaster power users"
   homepage "https://github.com/vrypan/fario"
-  url "https://files.pythonhosted.org/packages/8d/7c/c9f4f18fd849b844913f9f091fbb63c3a92f06feaa53807ec7230d6e6911/fario-0.7.8.tar.gz"
-  sha256 "0489d2ed6c8d19a8d84d6ddca96ee05c83ce94cf0baaa9cdab456862a8fa732b"
+  url "https://files.pythonhosted.org/packages/fd/13/e15994f34b19dc16370ce94bd5021a886c7e55f6540b1b4ed143fb58f212/fario-0.7.10.tar.gz"
+  sha256 "115d3cb386010405f5ce09b3b8ea9111725c53c39e5f942c5e0cb2cdcc97ad9f"
   license "MIT"
 
-  bottle do
-    rebuild 1
-    root_url "https://files.vrypan.com"
-    sha256 cellar: :any, arm64_sonoma: "ba716b302662f7fb6749463770228edb89b4c81413a7a10328f7ea3982638371"
-  end
+  # bottle do
+  #  rebuild 1
+  #  root_url "https://files.vrypan.com"
+  #  sha256 cellar: :any, arm64_sonoma: "ba716b302662f7fb6749463770228edb89b4c81413a7a10328f7ea3982638371"
+  # end
 
   livecheck do
     url :stable
@@ -124,8 +124,8 @@ class Fario < Formula
   end
 
   resource "farcaster-py" do
-    url "https://files.pythonhosted.org/packages/6b/2f/f8795228e70cc94aa606bfb27fd89f01b778f9ad1bea0789d06a51de920d/farcaster_py-0.0.9.tar.gz"
-    sha256 "8ddcc766678964781995d36e7176d116712a2cc0f662c695f719ce6e64848861"
+    url "https://files.pythonhosted.org/packages/5a/20/54423b0423cbcc81cba88fe73e0c4be7bf535902f8068aafc8fc4c8445a5/farcaster_py-0.1.2.tar.gz"
+    sha256 "403b7a5c6bd556fb6ebdc09da4d7536e01f3e883ffa7a6abbdb84321323752d8"
   end
 
   resource "frozenlist" do
@@ -272,6 +272,6 @@ class Fario < Formula
                 "M9TARI4d6K7hgBIkAfkcol+WyG0sNLEwQZ/ps4Z9A7+rP3GvLQoqM2jQijMWgh9iUKG0l4z1OxzSNp" \
                 "5oY8nZmuUyiMKW1zAzT6mqUNKAEyIGojm0P59c/uG4Is6+7zhoo5SXFmMNoxXWaWWNDLn59I"
     assert_match test_data, shell_output("echo #{test_data} | #{bin}/fario2json| #{bin}/json2fario")
-    assert_match "fario-out v0.7.1", shell_output("#{bin}/fario-out --version")
+    assert_match "fario-out v0.7.10", shell_output("#{bin}/fario-out --version")
   end
 end
